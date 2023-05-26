@@ -1,14 +1,10 @@
-# JAVA Simulation Project
+## JAVA Simulation Project
 ## Team members:
 
 1. Mohaned Khaled Hassan Hassan 2001372
-<br>
 2. Mohammed Magdy Mahrous 2000927
-<br>
 3. Mostafa Hessin Ahmed Qenawy 2000931
-<br>
 4. Salma Yasser Abdelmageed Meckawy Hemdan 20P7211
-<br>
 5. Sara Yasser Abdelmageed Meckawy Hemdan 20P8099
 ##
 
