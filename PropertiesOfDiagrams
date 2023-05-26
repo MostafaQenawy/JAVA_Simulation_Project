@@ -1,3 +1,7 @@
+/*
+Name: Mohammed Magdy Mahrous Morsy 
+ID: 2000927
+*/
 package Project;
 
 import java.io.File;
@@ -104,3 +108,4 @@ public class PropertiesOfDiagrams {
         }
         return arrBlocks;
     }
+//*****************************************************************************
