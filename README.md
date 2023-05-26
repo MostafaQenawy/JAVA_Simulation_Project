@@ -9,6 +9,18 @@ The tool is made up of two main things:
  The file reader reads the MDL file and gets all the important information like diagrams and connections. 
  The user interface shows the model in an easy-to-understand way and lets us interact with it.
  
+ ## Features of the program include:
+ First: run the program:
+ -The graphical user interface (GUI) of the program will appear on the screen
+ 
+ Second: file managment:
+ -Loading Simulink MDL Files: 
+ The program allows us to import Simulink MDL files, which contain the model information.
+ 
+ Third: Structure Display and model Visualization: 
+ -The program will display the contents of the MDL file in a hierarchical structure. 
+ -The GUI provides a visual representation of the model components such as block diagrams, parameters, and connections. 
+ 
 
 ## Output
 ![image](https://github.com/MohanadKhh/JAVA_Simulation_Project/assets/132143243/6db9145b-f42f-46e4-b021-4f6d0e2147b2)
