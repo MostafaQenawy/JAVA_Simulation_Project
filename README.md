@@ -12,16 +12,17 @@ The tool is made up of two main things:
  ## Features of the program include:
  First: run the program:
  The graphical user interface (GUI) of the program will appear on the screen
- 
+ ##
  Second: file managment:
  Loading Simulink MDL Files: 
- 
  The program allows us to import Simulink MDL files, which contain the model information.
- 
+ ##
  Third: Structure Display and model Visualization: 
- 
  -The program will display the contents of the MDL file in a hierarchical structure. 
  -The GUI provides a visual representation of the model components such as block diagrams, parameters, and connections. 
+ ##
+ forth:Real-time Visualization: 
+ When we make changes to the model interactively, the program will immediately update the visualization to reflect those changes.
  
 
 ## Output
