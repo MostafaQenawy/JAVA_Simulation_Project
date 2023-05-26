@@ -23,27 +23,32 @@ The tool is made up of two main things:
  ## Features of the program include:
  First: run the program:
  <br>
- -The graphical user interface (GUI) of the program will appear on the screen
+  -The graphical user interface (GUI) of the program will appear on the screen
  ##
  Second: file managment:
  <br>
  Loading Simulink MDL Files: 
  <br>
- -The program allows us to import Simulink MDL files, which contain the model information.
+  -The program allows us to import Simulink MDL files, which contain the model information.
  ##
  Third: file Parsing:
  <br>
- -Once the file is selected, the program begins reading its contents.
+  -Once the file is selected, the program begins reading its contents.
  <br>
- -It searches for a specific marker, "MWOPC_PART_BEGIN /simulink/systems/system_root.xml", which indicates the start of the block and line details.
+  -It searches for a specific marker, "MWOPC_PART_BEGIN /simulink/systems/system_root.xml", which indicates the start of the block and line details.
+ ##
+ Fourth: Block and Line Details Extraction:
+  -From the marker onwards, the program extracts information about the blocks present in the model.
+  -It captures details such as the position of the blocks, their source code, destination, and the number of ports they have.
+  -Similarly, the program also retrieves information about the lines connecting the blocks, including their source and destination connections.
 ##
- Fourth: Structure Display and model Visualization: 
+ Fifth: Structure Display and model Visualization: 
  <br>
  -The program will display the contents of the MDL file in a hierarchical structure. 
  <br>
  -The GUI provides a visual representation of the model components such as block diagrams, parameters, and connections. 
  ##
- Fifth:Real-time Visualization: 
+ Sixth: Real-time Visualization: 
  <br>
  -When we make changes to the model interactively, the program will immediately update the visualization to reflect those changes.
  
