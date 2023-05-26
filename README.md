@@ -31,6 +31,12 @@ The tool is made up of two main things:
  <br>
  The program allows us to import Simulink MDL files, which contain the model information.
  ##
+ File Parsing:
+ <br>
+ Once the file is selected, the program begins reading its contents.
+ <br>
+ It searches for a specific marker, "MWOPC_PART_BEGIN /simulink/systems/system_root.xml", which indicates the start of the block and line details.
+##
  Third: Structure Display and model Visualization: 
  <br>
  -The program will display the contents of the MDL file in a hierarchical structure. 
