@@ -3,13 +3,14 @@
 
 1. Mohaned Khaled Hassan Hassan 2001372
 <br>
-
+2. 
 <br>
 3. Mostafa Hessin Ahmed Qenawy 2000931
 <br>
 4. Salma Yasser Abdelmageed Meckawy Hemdan 20P7211
 <br>
 5. Sara Yasser Abdelmageed Meckawy Hemdan 20P8099
+##
 
 ## Description
 A real-time software system that opens Simulink MDL files in a Java based GUI
@@ -21,7 +22,7 @@ The tool is made up of two main things:
  The file reader reads the MDL file and gets all the important information like diagrams and connections. 
  <br>
  The user interface shows the model in an easy-to-understand way and lets us interact with it.
- 
+ ##
  ## Features of the program include:
  First: run the program:
  <br>
@@ -43,7 +44,7 @@ The tool is made up of two main things:
  <br>
  When we make changes to the model interactively, the program will immediately update the visualization to reflect those changes.
  
-
+##
 ## Output
 ![image](https://github.com/MohanadKhh/JAVA_Simulation_Project/assets/132143243/6db9145b-f42f-46e4-b021-4f6d0e2147b2)
 <br>
