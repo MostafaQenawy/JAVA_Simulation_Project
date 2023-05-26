@@ -37,7 +37,7 @@ The tool is made up of two main things:
  <br>
   -It searches for a specific marker, "MWOPC_PART_BEGIN /simulink/systems/system_root.xml", which indicates the start of the block and line details.
  ##
- Fourth: Block and Line Details Extraction:
+ Fourth: Block, Line and Branches Details Extraction:
  <br>
   -From the marker onwards, the program extracts information about the blocks present in the model.
   <br>
