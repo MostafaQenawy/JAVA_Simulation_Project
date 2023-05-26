@@ -27,6 +27,9 @@ The tool is made up of two main things:
 
 ## Output
 ![image](https://github.com/MohanadKhh/JAVA_Simulation_Project/assets/132143243/6db9145b-f42f-46e4-b021-4f6d0e2147b2)
+##
 ![image](https://github.com/MohanadKhh/JAVA_Simulation_Project/assets/132143243/e9dfa077-bc16-4f89-8e0e-f72a78209acc)
+##
 ![image](https://github.com/MohanadKhh/JAVA_Simulation_Project/assets/132143243/ea984b74-b1ac-4e75-a4c7-28c9ba5703c2)
+##
 
