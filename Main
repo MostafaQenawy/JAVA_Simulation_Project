@@ -60,3 +60,43 @@ public class Main extends Application {
 ************
 ********************
 */
+
+\*
+* Name: Salma Yasser Abdelmageed Meckawy Hemdan
+* ID: 20P7211
+* GitHub Username: Salma20020418
+*/
+
+ //file extraction
+                try {
+                    oututFile = FileHandling.extract(inputFile);
+                    System.out.println("Extraction completed. Output file: " + oututFile.getName());
+                } catch (FileNotFoundException e) {
+                    System.out.println("File not found: " + e.getMessage());
+                } catch (Exception e) {
+                    System.out.println(e.getMessage());
+                }
+                // block extraction
+                try {
+                    for (Block b : PropertiesOfDiagrams.extractBlocks(oututFile)) {
+                        System.out.println(b);
+                        System.out.println("Input Points = " + b.calculateLeftSidePoints());
+                        System.out.println("Output Points = " + b.calculateRightSidePoints());
+                    }
+                } catch (FileNotFoundException e) {
+                    System.out.println("File not found: " + e.getMessage());
+                } catch (Exception e) {
+                    System.out.println(e.getMessage());
+                }
+
+                System.out.println();
+                //line extraction
+                try {
+                    for (Line l : PropertiesOfDiagrams.extractLine(oututFile))
+                        System.out.println(l);
+                } catch (FileNotFoundException e) {
+                    System.out.println("File not found: " + e.getMessage());
+                } catch (Exception e) {
+                    System.out.println(e.getMessage());
+                }
+
