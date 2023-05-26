@@ -97,5 +97,130 @@ public class Main extends Application {
                     System.out.println("File not found: " + e.getMessage());
                 } catch (Exception e) {
                     System.out.println(e.getMessage());
-                }
+  /*
+   * Begining
+   * Of
+   * JAVAFX
+   * */
+                
+                
+ /*
+  * Name: Mostafa Hussin 
+  */
+
+                Image image = null;
+                ImageView imageView = null;
+
+
+                try {
+                    for (Block b : PropertiesOfDiagrams.extractBlocks(oututFile)) {
+                        double width = (b.positionX2) - (b.positionX1);
+                        double height = (b.positionY2) - (b.positionY1);
+                        Rectangle r = new Rectangle((b.positionX1), (b.positionY1), width, height);
+                        r.setFill(Color.WHITE);
+                        r.setStrokeWidth(3);
+                        r.setStroke(Color.web("39A8E8FF"));
+                        r.strokeWidthProperty();
+
+                        Label label = new Label(b.name);
+                        label.setTextFill(Color.web("3399CC"));
+                        label.setFont(new Font(12));
+                        Font boldFont = Font.font(label.getFont().getFamily(), FontWeight.BOLD, label.getFont().getSize());
+                        label.setFont(boldFont);
+                        label.setLayoutX(b.positionX1);
+                        label.setLayoutY(b.positionY2 + 3);
+                        layout.getChildren().addAll(label, r);
+
+                        if (!b.blockMirror) {
+                            if (b.inputsSymbols != null && b.inputsSymbols.length() == b.calculateLeftSidePoints().size()) {
+                                for (int i = 0; i < b.inputsSymbols.length(); i++) {
+                                    String character = Character.toString(b.inputsSymbols.charAt(i));
+                                    Text symbolIn = new Text(character);
+                                    symbolIn.setFont(Font.font("Arial", 13));
+                                    Font boldFont2 = Font.font(symbolIn.getFont().getFamily(), FontWeight.BOLD, symbolIn.getFont().getSize());
+                                    symbolIn.setFont(boldFont2);
+                                    symbolIn.setX(b.calculateLeftSidePoints().get(i).x + 1);
+                                    symbolIn.setY(b.calculateLeftSidePoints().get(i).y + 3);
+                                    layout.getChildren().add(symbolIn);
+                                }
+                            }
+
+                            if (b.outputsSymbols != null && b.outputsSymbols.length() == b.calculateRightSidePoints().size()) {
+                                for (int i = 0; i < b.outputsSymbols.length(); i++) {
+                                    String character = Character.toString(b.outputsSymbols.charAt(i));
+                                    Text symbolOut = new Text(character);
+                                    symbolOut.setFont(Font.font("Arial", 13));
+                                    Font boldFont2 = Font.font(symbolOut.getFont().getFamily(), FontWeight.BOLD, symbolOut.getFont().getSize());
+                                    symbolOut.setFont(boldFont2);
+                                    symbolOut.setX(b.calculateRightSidePoints().get(i).x + 1);
+                                    symbolOut.setY(b.calculateRightSidePoints().get(i).y + 3);
+                                    layout.getChildren().add(symbolOut);
+                                }
+                            }
+                        } else if (b.blockMirror) {
+                            if (b.inputsSymbols != null && b.inputsSymbols.length() == b.calculateRightSidePoints().size()) {
+                                for (int i = 0; i < b.inputsSymbols.length(); i++) {
+                                    String character = Character.toString(b.inputsSymbols.charAt(i));
+                                    Text symbolIn = new Text(character);
+                                    symbolIn.setFont(Font.font("Arial", 13));
+                                    Font boldFont2 = Font.font(symbolIn.getFont().getFamily(), FontWeight.BOLD, symbolIn.getFont().getSize());
+                                    symbolIn.setFont(boldFont2);
+                                    symbolIn.setX(b.calculateRightSidePoints().get(i).x + 1);
+                                    symbolIn.setY(b.calculateRightSidePoints().get(i).y + 3);
+                                    layout.getChildren().add(symbolIn);
+                                }
+                            }
+
+                            if (b.outputsSymbols != null && b.outputsSymbols.length() == b.calculateLeftSidePoints().size()) {
+                                for (int i = 0; i < b.outputsSymbols.length(); i++) {
+                                    String character = Character.toString(b.outputsSymbols.charAt(i));
+                                    Text symbolOut = new Text(character);
+                                    symbolOut.setFont(Font.font("Arial", 13));
+                                    Font boldFont2 = Font.font(symbolOut.getFont().getFamily(), FontWeight.BOLD, symbolOut.getFont().getSize());
+                                    symbolOut.setFont(boldFont2);
+                                    symbolOut.setX(b.calculateLeftSidePoints().get(i).x);
+                                    symbolOut.setY(b.calculateLeftSidePoints().get(i).y);
+                                    layout.getChildren().add(symbolOut);
+                                }
+                            }
+                        }
+//                        if (b.name.equalsIgnoreCase("Saturation")){
+//                            image = new Image("C:\\Users\\Mohanad.Khh\\IdeaProjects\\Advanced Programming_Project\\Saturation.jpg");
+//                            imageView = new ImageView(image);
+//                            imageView.setX(b.positionX1+1);
+//                            imageView.setY(b.positionY1+1);
+//                            imageView.setFitWidth(width-2);
+//                            imageView.setFitHeight(height-2);
+//                            layout.getChildren().add(imageView);
+//                        }
+//                        else if (b.name.equalsIgnoreCase("Constant")){
+//                            Label lab = new Label("1");
+//                            lab.setLayoutX(b.positionX1 + (width/3));
+//                            lab.setLayoutY(b.positionY1 + (height/4));
+//                            layout.getChildren().add(lab);
+//                       }
+//                        else if (b.name.equalsIgnoreCase("Scope")){
+//                            image = new Image("C:\\Users\\Mohanad.Khh\\IdeaProjects\\Advanced Programming_Project\\Scope.jpg");
+//                            imageView = new ImageView(image);
+//                            imageView.setX(b.positionX1+1);
+//                            imageView.setY(b.positionY1+1);
+//                            imageView.setFitWidth(width-2);
+//                            imageView.setFitHeight(height-2);
+//                            layout.getChildren().add(imageView);
+//                        }
+//                        else if (b.name.equalsIgnoreCase("Unit Delay")){
+//                            image = new Image("C:\\Users\\Mohanad.Khh\\IdeaProjects\\Advanced Programming_Project\\Unit Delay.jpg");
+//                            imageView = new ImageView(image);
+//                            imageView.setX(b.positionX1+1);
+//                            imageView.setY(b.positionY1+1);
+//                            imageView.setFitWidth(width-2);
+//                            imageView.setFitHeight(height-2);
+//                            layout.getChildren().add(imageView);
+//                        }
+
+
+                    }
+                } catch (FileNotFoundException e) {
+                    throw new RuntimeException(e);
+                }              }
 
