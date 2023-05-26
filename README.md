@@ -23,6 +23,7 @@ The tool is made up of two main things:
  <br>
  The user interface shows the model in an easy-to-understand way and lets us interact with it.
  ##
+ 
  ## Features of the program include:
  First: run the program:
  <br>
@@ -44,7 +45,7 @@ The tool is made up of two main things:
  <br>
  When we make changes to the model interactively, the program will immediately update the visualization to reflect those changes.
  
-##
+
 ## Output
 ![image](https://github.com/MohanadKhh/JAVA_Simulation_Project/assets/132143243/6db9145b-f42f-46e4-b021-4f6d0e2147b2)
 <br>
