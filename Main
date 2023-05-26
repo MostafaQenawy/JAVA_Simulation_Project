@@ -1,1 +1,62 @@
+\*
+* Nmae: Mohaned Khaled Hassan
+* ID: 2001372
+* GitHub Username: MohandKhh
+*/
 
+package Project;
+
+import javafx.application.Application;
+import javafx.scene.Scene;
+import javafx.scene.control.Label;
+import javafx.scene.image.Image;
+import javafx.scene.image.ImageView;
+import javafx.scene.layout.GridPane;
+import javafx.scene.layout.Pane;
+import javafx.scene.paint.Color;
+import javafx.scene.shape.Circle;
+import javafx.scene.shape.Polygon;
+import javafx.scene.shape.Rectangle;
+import javafx.scene.text.Font;
+import javafx.scene.text.FontWeight;
+import javafx.scene.text.Text;
+import javafx.stage.FileChooser;
+import javafx.stage.Stage;
+
+import java.io.File;
+import java.io.FileNotFoundException;
+import java.util.ArrayList;
+
+public class Main extends Application {
+        private File inputFile;
+        static File oututFile = null;
+
+        public static void main(String[] args) {
+
+            launch(args);
+        }
+
+        @Override
+        public void start(Stage primaryStage) {
+
+            primaryStage.setTitle("Hello");
+            GridPane grid = new GridPane();
+            Pane layout = new Pane();
+            Scene scene1 = new Scene(grid, 400, 500);
+            Scene scene2 = new Scene(layout,1500,750);
+            grid.setVgap(10);
+            grid.setHgap(3);
+            Label lb = new Label("Please Choose your MDL file");
+            javafx.scene.control.Button btn = new javafx.scene.control.Button("       Browse       ");
+            btn.setOnAction(z -> {
+                FileChooser fc = new FileChooser();
+                fc.getExtensionFilters().addAll(new FileChooser.ExtensionFilter("MDL File", "*mdl"));
+                inputFile = fc.showOpenDialog(primaryStage);
+                System.out.println(inputFile);
+                
+                
+/*
+********
+************
+********************
+*/
