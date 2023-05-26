@@ -1,15 +1,16 @@
 # JAVA Simulation Project
 ## Team members:
 
-Mohaned Khaled Hassan Hassan 2001372
+1. Mohaned Khaled Hassan Hassan 2001372
 <br>
 
 <br>
-Mostafa hessin ahmed qenawy 2000931
+3. Mostafa Hessin Ahmed Qenawy 2000931
 <br>
-Salma Yasser Abdelmageed Meckawy Hemdan 20P7211
+4. Salma Yasser Abdelmageed Meckawy Hemdan 20P7211
 <br>
-Sara Yasser Abdelmageed Meckawy Hemdan 20P8099
+5. Sara Yasser Abdelmageed Meckawy Hemdan 20P8099
+
 ## Description
 A real-time software system that opens Simulink MDL files in a Java based GUI
 
