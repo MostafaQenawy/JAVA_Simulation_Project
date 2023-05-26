@@ -22,7 +22,7 @@ The tool is made up of two main things:
  The file reader reads the MDL file and gets all the important information like diagrams and connections. 
  <br>
  The user interface shows the model in an easy-to-understand way and lets us interact with it.
- ##
+ 
  
  ## Features of the program include:
  First: run the program:
