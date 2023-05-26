@@ -1,1 +1,59 @@
+package Project;
 
+import java.util.ArrayList;
+
+public class Line {
+    String blockOut;
+    String blockIn;
+    int orderOut;
+    int orderIn;
+    int numOfBranches;
+    int numOfPoints;
+    ArrayList<Point> pointsLine;
+    ArrayList<Branch> branches;
+
+    public void setBlockOut(String blockOut) {
+        this.blockOut = blockOut;
+    }
+
+    public void setBlockIn(String blockIn) {
+        this.blockIn = blockIn;
+    }
+
+    public void setOrderOut(int orderOut) {
+        this.orderOut = orderOut;
+    }
+
+    public void setOrderIn(int orderIn) {
+        this.orderIn = orderIn;
+    }
+
+    public void setNumOfBranches(int numOfBranches) {
+        this.numOfBranches = numOfBranches;
+    }
+
+    public void setBranches(ArrayList<Branch> branches) {
+        this.branches = branches;
+    }
+
+    public void setNumOfPoints(int numOfPoints) {
+        this.numOfPoints = numOfPoints;
+    }
+
+    public void setPointsLine(ArrayList<Point> pointsLine) {
+        this.pointsLine = pointsLine;
+    }
+
+    @Override
+    public String toString() {
+        return "\nLine:" +
+                "\nblockOut=" + blockOut +
+                "  --  blockIn=" + blockIn +
+                "\norderOut=" + orderOut +
+                "  --  orderIn=" + orderIn +
+                "\nnumOfBranches=" + numOfBranches +
+                "  --  numOfPoints=" + numOfPoints +
+                "\nPoints=" + pointsLine +
+                "\nBranches=" + branches;
+    }
+}
