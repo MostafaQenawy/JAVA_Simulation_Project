@@ -1,1 +1,110 @@
+package Project;
+
+import javafx.scene.shape.Rectangle;
+
+import java.util.ArrayList;
+
+public class Block {
+    String name;
+    String blockType;
+    String SID;
+    double positionX1;
+    double positionY1;
+    double positionX2;
+    double positionY2;
+    int inputPorts = 1;
+    int outputPorts = 1;
+    String inputsSymbols;
+    String outputsSymbols;
+    boolean blockMirror = false;
+/*    ArrayList<Point> inputPoints;
+    ArrayList<Point> outputPoints;*/
+
+    public ArrayList<Point> calculateLeftSidePoints() {
+        ArrayList<Point> points = new ArrayList<>();
+        double deltaY = (positionY2-positionY1) / (inputPorts + 1); // Vertical spacing between points
+
+        for (int i = 1; i <= inputPorts; i++) {
+            double pointY = positionY1 + (deltaY * i);
+            points.add(new Point(positionX1, pointY));
+        }
+        return points;
+    }
+
+    public ArrayList<Point> calculateRightSidePoints() {
+        ArrayList<Point> points = new ArrayList<>();
+        double deltaY = (positionY2-positionY1) / (outputPorts + 1); // Vertical spacing between points
+
+        for (int i = 1; i <= outputPorts; i++) {
+            double pointY = positionY1 + (deltaY * i);
+            points.add(new Point(positionX2, pointY));
+        }
+        return points;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public void setBlockType(String blockType) {
+        this.blockType = blockType;
+    }
+
+    public void setSID(String SID) {
+        this.SID = SID;
+    }
+
+    public void setPositionX1(double positionX1) {
+        this.positionX1 = positionX1;
+    }
+
+    public void setPositionY1(double positionY1) {
+        this.positionY1 = positionY1;
+    }
+
+    public void setPositionX2(double positionX2) {
+        this.positionX2 = positionX2;
+    }
+
+    public void setPositionY2(double positionY2) {
+        this.positionY2 = positionY2;
+    }
+
+    public void setInputPorts(int inputPorts) {
+        this.inputPorts = inputPorts;
+    }
+
+    public void setOutputPorts(int outputPorts) {
+        this.outputPorts = outputPorts;
+    }
+
+    public void setInputsSymbols(String inputsSymbols) {
+        this.inputsSymbols = inputsSymbols;
+    }
+
+    public void setOutputsSymbols(String outputsSymbols) {
+        this.outputsSymbols = outputsSymbols;
+    }
+
+    public void setBlockMirror(boolean blockMirror) {
+        this.blockMirror = blockMirror;
+    }
+
+    @Override
+    public String toString() {
+        return "\nBlock:" +
+                "\nName = " + name +
+                "  ||  blockType = " + blockType +
+                "  ||  SID =" + SID +
+                "\npositionX = " + positionX1 +
+                "  ||  positionY = " + positionY1 +
+                "\npositionW = " + positionX2 +
+                "  ||  positionH = " + positionY2 +
+                "\nNumInputs = " + inputPorts +
+                "  ||  NumOutputs = " + outputPorts +
+                "\nInputs Sybols = " + inputsSymbols +
+                "  ||  Output Symbols = " + outputsSymbols +
+                "  ||  Block Mirror = " + blockMirror;
+    }
+}
 
