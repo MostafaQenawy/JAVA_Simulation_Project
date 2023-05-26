@@ -109,3 +109,128 @@ public class PropertiesOfDiagrams {
         return arrBlocks;
     }
 //*****************************************************************************
+ /*
+Name: Sara Yasser Abdelmageed Meckawy Hemdan
+ID: 20P8099
+*/
+
+
+    public static ArrayList<Linee> extractLine(File file) throws FileNotFoundException {
+        Scanner scan = new Scanner(file);
+        ArrayList<Linee> arrLine = new ArrayList();
+        while (scan.hasNextLine()) {
+            String line = scan.nextLine();
+            if (line.contains("<Line>")) {
+                int counterBranches = 0;
+                Linee l = new Linee();
+                ArrayList<Branch>branches = new ArrayList<>();
+
+                while (!line.contains("</Line>") && scan.hasNextLine()) {
+
+                    if (line.contains("Src")) {
+                        matcher = patternNum.matcher(line);
+                        for (int i = 0; matcher.find(); i++) {
+                            switch (i) {
+                                case 0:
+                                    l.setBlockOut(matcher.group());
+                                    break;
+                                case 1:
+                                    l.setOrderOut(Integer.parseInt((matcher.group())));
+                                    break;
+                                default:
+                                    break;
+                            }
+                        }
+                    }
+
+                    if (line.contains("Dst")) {
+                        matcher = patternNum.matcher(line);
+
+                        for (int i = 0; matcher.find(); i++) {
+                            switch (i) {
+                                case 0:
+                                    l.setBlockIn(matcher.group());
+                                    break;
+                                case 1:
+                                    l.setOrderIn(Integer.parseInt((matcher.group())));
+                                    break;
+                                default:
+                                    break;
+                            }
+                        }
+                    }
+
+                    if (line.contains("Points")) {
+                        int numOfPoints = (line.length() - line.replace(String.valueOf(';'), "").length()) + 1 ;
+                        ArrayList<Point> points = new ArrayList<>();
+                        matcher = patternNum.matcher(line);
+
+                        for (int i = 0; i<numOfPoints; i++) {
+                            Point p = new Point();
+                            matcher.find();
+                            p.setX(Integer.parseInt(matcher.group()));
+                            matcher.find();
+                            p.setY(Integer.parseInt(matcher.group()));
+                            points.add(p);
+                        }
+                        l.setNumOfPoints(numOfPoints);
+                        l.setPointsLine(points);
+                    }
+
+                    if (line.contains("<Branch>")) {
+                        Branch branch = new Branch();
+                        counterBranches++;
+
+                        while (!line.contains("</Branch>")) {
+                            if(line.contains("Points")) {
+                                int numOfPoints = (line.length() - line.replace(String.valueOf(';'), "").length()) + 1 ;
+                                ArrayList<Point> points = new ArrayList<>();
+                                matcher = patternNum.matcher(line);
+
+                                for (int i = 0; i<numOfPoints; i++) {
+                                    Project.Point p = new Project.Point();
+                                    matcher.find();
+                                    p.setX(Integer.parseInt(matcher.group()));
+                                    matcher.find();
+                                    p.setY(Integer.parseInt(matcher.group()));
+                                    points.add(p);
+                                }
+                                branch.setPointsBranch(points);
+                                branch.setNumOfPoints(numOfPoints);
+                            }
+
+                            if(line.contains("Dst")) {
+                                matcher = patternNum.matcher(line);
+
+                                for (int i = 0; matcher.find(); i++) {
+                                    switch (i) {
+                                        case 0:
+                                            branch.setBlockIn(matcher.group());
+                                            break;
+                                        case 1:
+                                            branch.setOrderIn(Integer.parseInt((matcher.group())));
+                                            break;
+                                        default:
+                                            break;
+                                    }
+                                }
+                            }
+
+                            line = scan.nextLine();
+
+                        }
+                        branches.add(branch);
+                    }
+                    line = scan.nextLine();
+                }
+                if(counterBranches==0)
+                    l.setBranches(null);
+                else
+                    l.setBranches(branches);
+                l.setNumOfBranches(counterBranches);
+                arrLine.add(l);
+            }
+        }
+        return arrLine;
+    }
+}
