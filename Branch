@@ -1,1 +1,49 @@
+package Trial;
+
+import java.util.ArrayList;
+
+public class Branch {
+     int numOfPoints;
+     String blockIn;
+     int orderIn;
+     ArrayList<Point> pointsBranch;
+
+    public void setPointsBranch(ArrayList<Point> pointsBranch) {
+        this.pointsBranch = pointsBranch;
+    }
+
+    public void setBlockIn(String blockIn) {
+        this.blockIn = blockIn;
+    }
+
+    public void setOrderIn(int orderIn) {
+        this.orderIn = orderIn;
+    }
+
+    public void setNumOfPoints(int numOfPoints) {
+        this.numOfPoints = numOfPoints;
+    }
+
+    @Override
+    public String toString() {
+        return "Branch{" +
+                "pointBranch=" + pointsBranch +
+                ", numOfPoints=" + numOfPoints +
+                ", blockIn=" + blockIn +
+                ", orderIn=" + orderIn +
+                '}';
+    }
+
+    private ArrayList<Point> getPointsBranch() {
+        return pointsBranch;
+    }
+
+    private String getBlockIn() {
+        return blockIn;
+    }
+
+    private int getOrderIn() {
+        return orderIn;
+    }
+}
 
