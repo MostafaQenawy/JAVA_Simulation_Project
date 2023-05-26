@@ -3,7 +3,7 @@
 
 1. Mohaned Khaled Hassan Hassan 2001372
 <br>
-2. 
+2. Mohammed Magdy Mahrous 2000927
 <br>
 3. Mostafa Hessin Ahmed Qenawy 2000931
 <br>
@@ -58,4 +58,5 @@ The tool is made up of two main things:
 ##
 ## Project run video
 
+https://github.com/MohanadKhh/JAVA_Simulation_Project/assets/132143243/00f2a067-6518-4554-9233-512a152013af
 
